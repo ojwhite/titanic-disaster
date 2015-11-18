@@ -3,7 +3,9 @@
 
 ## Setup
 
-setwd("C:/Users/Owen/Documents/Interests/Programming/Data Science/Kaggle/Titanic")
+#setwd("C:/Users/Owen/Documents/Interests/Programming/Data Science/Kaggle/Titanic")
+setwd("C:/Users/Owen/Documents/Kaggle/titanic-disaster")
+
 
 # Packages
 library("rpart")         # Decision Trees

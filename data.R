@@ -1,28 +1,21 @@
 ### Data
 
-
-## Setup
-
 #setwd("C:/Users/Owen/Documents/Interests/Programming/Data Science/Kaggle/Titanic")
 setwd("C:/Users/Owen/Documents/Kaggle/titanic-disaster") # home
 
-# Data - Read In
+## Read In
 train <- read.csv("data/train.csv")
 test <- read.csv("data/test.csv")
 
-# Data - New Variables
-# ...
+## Forks
+train1 <- train
 
-
-## Explore
-
+## Overview
 #str(train)
+#summary(train)
+#dim(train)
 
-# New field - Title
-y <- grep("[A-Za-z]+\\.", train$Name, value=TRUE)
-y <- grep("\\.", train$Name, value=TRUE, perl=TRUE)
-y <- grep("Rice", train$Name, value=TRUE)
-
+## New Fields
+# Title
 pttn <- regexpr("[A-Za-z]+\\.", train$Name, perl=TRUE)
-
-z <- regmatches(train$Name, pttn)
+train1$Title <- factor(regmatches(train$Name, pttn))
